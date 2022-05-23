@@ -1,0 +1,5 @@
+local db = require("lua-mysql")
+local mysql = db.connect("root","root","127.0.0.1","3306","test")
+db.ping(mysql)
+db.insert(mysql,"INSERT INTO demo(name, id) VALUES('lua', '1')")
+db.delete(mysql,"DELETE FROM demo")
